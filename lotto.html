@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotto</title>
+    <script>
+        var lotto = [];
+        var nums = [];
+        for(var i = 1; i <= 45; i++){
+            nums.push(i);
+        }
+        for(var i = 0; i < 6; i++){
+            var num = Math.floor(Math.random() * (45 - i));
+            lotto.push(nums[num]);
+
+            nums = nums.filter(function(n){
+                return n != nums[num];
+            });
+        }
+
+        lotto.sort(function(left, right){
+            return left - right;
+        });
+        alert('이번 주 로또번호 : ' + lotto);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

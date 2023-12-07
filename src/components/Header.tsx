@@ -2,35 +2,29 @@
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-gray-800 py-4 fixed w-full top-0">
-      <nav className="container mx-auto">
-        <ul className="flex items-center space-x-4">
+    <header className="bg-black py-4 fixed w-full top-0">
+      <nav className="  flex justify-between items-center pr-8 pl-8">
+        <div className="text-yellow-100">
+          <span className="font-bold text-2xl">Moonyah's Portfolio</span>
+        </div>
+        <ul className="flex items-center space-x-4 text-sm font-normal text-white pl-5">
           <li>
-            <a href="#about-me" className="text-white">
-              About me
-            </a>
+            <a href="#about-me">About me</a>
           </li>
           <li>
-            <a href="#skills" className="text-white">
-              Skills
-            </a>
+            <a href="#skills">Skills</a>
           </li>
           <li>
-            <a href="#projects" className="text-white">
-              Projects
-            </a>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <a href="#career" className="text-white">
-              Career
-            </a>
+            <a href="#career">Career</a>
           </li>
           <li>
             <a
               href="https://github.com/moonyah"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white"
             >
               Github
             </a>

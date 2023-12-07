@@ -8,10 +8,13 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <main className="flex flex-col p-24">
         <AboutMe />
+        <hr className="border-t border-gray-700 my-8" />
         <Skills />
+        <hr className="border-t border-gray-700 my-8" />
         <Projects />
+        <hr className="border-t border-gray-700 my-8" />
         <Career />
       </main>
     </>

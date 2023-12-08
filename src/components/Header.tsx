@@ -4,7 +4,7 @@ const Header: React.FC = () => {
   return (
     <header className="bg-black py-4 fixed w-full top-0">
       <nav className="  flex justify-between items-center pr-8 pl-8">
-        <div className="text-yellow-100">
+        <div className="text-yellow-200">
           <span className="font-bold text-2xl">Moonyah's Portfolio</span>
         </div>
         <ul className="flex items-center space-x-4 text-sm font-normal text-white pl-5">

@@ -4,7 +4,7 @@ const Career: React.FC = () => {
   return (
     <section id="career" className="py-8">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold mb-4 text-yellow-50">Career</h2>
+        <h2 className="text-4xl font-bold mb-4 text-yellow-300">Career</h2>
 
         {/* 경력 정보 */}
         <div className="border p-4 rounded-md border-gray-700">

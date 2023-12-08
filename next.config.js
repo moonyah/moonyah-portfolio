@@ -1,3 +1,12 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/',
+  eslint: {
+    dirs: ['src'],
+    ignoreDuringBuilds: true,
+  },
+
+  reactStrictMode: false,
+  swcMinify: true,
 };
+
+module.exports = nextConfig;

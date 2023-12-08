@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath: '/moonyah.github.io',
-
-  output: 'export',
+  output: {
+    export: {
+      pages: ['/'],
+    },
+  },
   eslint: {
     dirs: ['src'],
     ignoreDuringBuilds: true,

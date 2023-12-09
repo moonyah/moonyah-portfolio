@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className='flex flex-col p-24'>
+      <main className='flex flex-col md:p-24 p-4'>
         <AboutMe />
         <hr className='border-t border-gray-700 my-8' />
         <Skills />

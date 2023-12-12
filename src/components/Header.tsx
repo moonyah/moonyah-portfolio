@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 
 const Header: React.FC = () => {
   return (
-    <header className='bg-black py-4 fixed w-full top-0'>
+    <header className='bg-black py-4 fixed w-full top-0 z-10'>
       <nav className='flex justify-between items-center pr-4 pl-4 md:pr-8 md:pl-8'>
         <div className='text-yellow-200'>
           <span className='font-bold text-2xl'>Moonyah's Portfolio</span>

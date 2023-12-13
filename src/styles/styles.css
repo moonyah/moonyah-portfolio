@@ -1,0 +1,5 @@
+.slick-dots-white {
+  .slick-dots li button {
+    color: white; /* 흰색으로 변경 */
+  }
+}

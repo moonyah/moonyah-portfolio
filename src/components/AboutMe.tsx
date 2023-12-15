@@ -44,12 +44,14 @@ const AboutMe: React.FC = () => {
           .
         </p>
 
-        {/* 학력 정보 */}
         <div>
-          <h3 className='text-2xl font-bold mb-2 text-yellow-100'>Education</h3>
+          <h3 className='text-2xl font-bold mb-2 text-yellow-100'>약력</h3>
           <ul className='list-disc pl-6 text-gray-300'>
-            <li>숭실대학교 글로벌미디어학부 (2021 - 2022)</li>
-            <li>한국공학대학교 소프트웨어학과 (2018 - 2019)</li>
+            <li>
+              야놀자 X 패스트캠퍼스 프론트엔드 부트캠프 1기 (2023.07 - 2024.01)
+            </li>
+            <li>숭실대학교 글로벌미디어학부 (2021.03 - 2022.12)</li>
+            <li>한국공학대학교 소프트웨어학과 (2018.03 - 2019.12)</li>
           </ul>
         </div>
       </div>

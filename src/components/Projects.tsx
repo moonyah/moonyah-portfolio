@@ -79,17 +79,23 @@ export const projectData = [
     githubUrl: 'https://github.com/moonyah/Hogwartalk',
     deploymentUrl: 'https://hogwartalk.vercel.app/',
   },
-  // {
-  //   title: 'CS-yum-blog',
-  //   duration: '',
-  //   teamMembers: 5,
-  //   images: ['stayinn/1.gif', 'stayinn/2.gif', 'stayinn/3.gif'],
-  //   description: 'CS스터디 내용을 정리해 놓은 블로그',
-  //   responsibilities: '',
-  //   techStack: 'React',
-  //   githubUrl: 'https://github.com/your-username/final-project',
-  //   deploymentUrl: 'https://final-project.netlify.app',
-  // },
+  {
+    title: 'CS-yum-blog',
+    duration: '2023년 07월 13일 - 2023년 11월 02일',
+    teamMembers: 5,
+    images: [
+      '/assets/csYumBlog/1.gif',
+      '/assets/csYumBlog/2.png',
+      '/assets/csYumBlog/3.png',
+      '/assets/csYumBlog/4.png',
+      '/assets/csYumBlog/5.png',
+    ],
+    description: 'CS스터디 내용을 정리해 놓은 블로그',
+    responsibilities: '주 2회 스터디 참여, 블로그 글 발행 참여',
+    techStack: 'React',
+    githubUrl: 'https://github.com/cs-yum/cs-yum-blog',
+    deploymentUrl: 'https://cs-yum-blog.vercel.app/',
+  },
   // {
   //   title: 'Company Space',
   //   duration: '2023년 9월 8일 - 2023년 9월 22일',
@@ -154,7 +160,7 @@ const NextArrow = ({ onClick }: ArrowProps) => (
   <button
     onClick={onClick}
     type='button'
-    className='absolute inset-y-1/2 right-0 z-10 pr-4 text-[3rem] text-white
+    className='absolute inset-y-1/2 right-0 z-10 text-[2rem] text-yellow-800
     '
   >
     <CgChevronRight />
@@ -165,7 +171,7 @@ const PrevArrow = ({ onClick }: ArrowProps) => (
   <button
     onClick={onClick}
     type='button'
-    className='absolute inset-y-1/2 left-0 z-10 pl-4 text-[3rem] text-white'
+    className='absolute inset-y-1/2 left-0 z-10 text-[2rem] text-yellow-800'
   >
     <CgChevronLeft />
   </button>
@@ -199,7 +205,7 @@ const Projects = ({ projects }: { projects: Project[] }) => {
                   className='slick-dots-white relative mb-4'
                 >
                   {project.images.map((image: string, index: number) => (
-                    <div key={index} className='h-48 w-96 md:mt-8'>
+                    <div key={index} className='h-50 md:mt-8'>
                       <Image
                         src={image}
                         alt={`Main Image ${index + 1}`}
@@ -211,7 +217,7 @@ const Projects = ({ projects }: { projects: Project[] }) => {
                   ))}
                 </Slider>
               </div>
-              <div className='md:w-1/2'>
+              <div className='md:w-1/2 md:ml-10 mt-4'>
                 <h3 className='text-2xl font-bold mb-2 text-yellow-200'>
                   {project.title}
                 </h3>

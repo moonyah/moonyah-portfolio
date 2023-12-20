@@ -1,4 +1,3 @@
-// components/Projects.tsx
 'use client';
 import Image from 'next/image';
 import Slider, { Settings } from 'react-slick';
@@ -6,7 +5,10 @@ import Slider, { Settings } from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { CgChevronLeft, CgChevronRight } from 'react-icons/cg';
+
 // import '../styles/styles.css'; // 생성한 CSS 파일을 import
+import { projectData } from '../data/projestsData'; // Adjust the import path accordingly
+import { useEffect, useState } from 'react';
 
 interface Project {
   title: string;
@@ -20,156 +22,6 @@ interface Project {
   deploymentUrl?: string;
   demoUrl?: string;
 }
-
-// 프로젝트 정보 배열
-export const projectData = [
-  // {
-  //   title: 'Final Project',
-  //   duration: '2023년 12월 26일 - 2024년 1월 29일',
-  //   teamMembers: 16,
-  //   images: ['/project1_2.gif', '/project1_2.gif', '/project1_2.gif'],
-  //   description: 'Final project에 대한 설명',
-  //   responsibilities: '나의 역할',
-  //   techStack: 'React',
-  //   githubUrl: 'https://github.com/your-username/final-project',
-  //   deploymentUrl: 'https://final-project.netlify.app',
-  // },
-  {
-    title: "Moonyah's Portfolio",
-    duration: '2023년 12월',
-    teamMembers: 1,
-    images: [
-      '/assets/moonyahsPortfolio/1.png',
-      '/assets/moonyahsPortfolio/2.png',
-    ],
-    description: '포트폴리오 용도로 제작한 웹사이트입니다.',
-    techStack: 'React, Next.js, TypeScript',
-    githubUrl: 'https://github.com/moonyah/moonyah-portfolio',
-    deploymentUrl: 'https://moonyah-portfolio.vercel.app',
-  },
-  {
-    title: 'STAYINN',
-    duration: '2023년 11월 20일 - 2023년 12월 1일',
-    teamMembers: 8,
-    images: [
-      '/assets/stayinn/1.gif',
-      '/assets/stayinn/2.gif',
-      '/assets/stayinn/3.png',
-      '/assets/stayinn/4.gif',
-    ],
-    description: '숙박 예약 서비스',
-    responsibilities: '메인 페이지, 카테고리 페이지',
-    techStack: 'React, Next.js, TypeScript, Recoil',
-    githubUrl: 'https://github.com/moonyah/KDT_Y_FE_Mini-Project',
-    deploymentUrl: 'https://www.stayinn.site',
-    demoUrl:
-      'https://drive.google.com/file/d/14apsd5GBasq9pUgUAFFZjZgJzqrIvaB2/view',
-  },
-  {
-    title: '호그와톡',
-    duration: '2023년 11월 6일 - 2023년 11월 16일',
-    teamMembers: 5,
-    images: [
-      '/assets/hogwartalk/1.png',
-      '/assets/hogwartalk/2.png',
-      '/assets/hogwartalk/3.gif',
-      '/assets/hogwartalk/4.png',
-      '/assets/hogwartalk/5.png',
-    ],
-    description: '해리포터 컨셉의 소켓 기반 채팅 서비스',
-    responsibilities: '공통 컴포넌트 (마이페이지, 친구 목록)',
-    techStack: 'React, Next.js, Typescript, Recoil, Firebase',
-    githubUrl: 'https://github.com/moonyah/Hogwartalk',
-    deploymentUrl: 'https://hogwartalk.vercel.app',
-    demoUrl: 'https://www.youtube.com/watch?v=6IktbgBNJ7s',
-  },
-  {
-    title: 'CS-yum-blog',
-    duration: '2023년 07월 13일 - 2023년 11월 02일',
-    teamMembers: 5,
-    images: [
-      '/assets/csYumBlog/1.gif',
-      '/assets/csYumBlog/2.png',
-      '/assets/csYumBlog/3.png',
-      '/assets/csYumBlog/4.png',
-      '/assets/csYumBlog/5.png',
-    ],
-    description: 'CS스터디 내용을 정리해 놓은 블로그',
-    responsibilities: '주 2회 스터디 참여, 블로그 글 발행 참여',
-    techStack: 'React, TypeScript, Firebase',
-    githubUrl: 'https://github.com/cs-yum/cs-yum-blog',
-    deploymentUrl: 'https://cs-yum-blog.vercel.app',
-  },
-  {
-    title: 'Company Space',
-    duration: '2023년 9월 8일 - 2023년 9월 22일',
-    teamMembers: 5,
-    images: [
-      '/assets/companySpace/1.gif',
-      '/assets/companySpace/2.gif',
-      '/assets/companySpace/3.gif',
-      '/assets/companySpace/4.png',
-      '/assets/companySpace/5.png',
-    ],
-    description: '직원 위키 서비스',
-    responsibilities: '출퇴근 모달 제작',
-    techStack: 'React',
-    githubUrl: 'https://github.com/YongYong21/Toy1_team2',
-    deploymentUrl: 'https://glittering-speculoos-415dd0.netlify.app',
-  },
-  {
-    title: '카페 직원 관리 서비스',
-    duration: '2023년 8월 7일 - 2023년 8월 17일',
-    teamMembers: 1,
-    images: [
-      '/assets/cafeManagementService/1.gif',
-      '/assets/cafeManagementService/2.png',
-      '/assets/cafeManagementService/3.gif',
-      '/assets/cafeManagementService/4.png',
-    ],
-    description: '카페 직원들의 정보를 관리하는 서비스',
-    techStack: 'JavaScript, CSS, AWS S3',
-    githubUrl:
-      'https://github.com/moonyah/emp_management_cafe?tab=readme-ov-file',
-    deploymentUrl: 'https://employee-management-cafe.netlify.app',
-  },
-  // {
-  //   title: '룸루랄라',
-  //   duration: '',
-  //   teamMembers: 3,
-  //   images: ['stayinn/1.gif', 'stayinn/2.gif', 'stayinn/3.gif'],
-  //   description: '방탈출 카페를 모아놓은 웹사이트',
-  //   responsibilities: '나의 역할',
-  //   techStack: 'React',
-  //   githubUrl: 'https://github.com/your-username/final-project',
-  //   deploymentUrl: 'https://final-project.netlify.app',
-  // },
-  {
-    title: 'Todolist Tomato',
-    duration: '2022년 1학기 기말 과제',
-    teamMembers: 1,
-    images: ['/assets/todolistTomato/1.png', '/assets/todolistTomato/2.png'],
-    description:
-      '할 일을 완료하면 토마토가 열리는 일정 관리 앱 (2022-1학기 모바일 프로그래밍 수업 과제)',
-    techStack: 'Flutter, Firebase',
-    githubUrl: 'https://github.com/moonyah/TodolistTomato',
-  },
-  {
-    title: '7호선 빌런',
-    duration: '2021년 9월 1일 - 2022년 5월 19일',
-    teamMembers: 3,
-    images: [
-      '/assets/line7Villain/1.png',
-      '/assets/line7Villain/2.png',
-      '/assets/line7Villain/3.png',
-      '/assets/line7Villain/4.png',
-    ],
-    description: '7호선 빌런을 물리치는 3D 리듬 게임 (졸업 작품)',
-    responsibilities: '3D 모델링, 게임 UI/UX',
-    techStack: 'Unity, Blender',
-    demoUrl: 'https://www.youtube.com/watch?v=JbltKXHdKgA',
-  },
-];
 
 interface ArrowProps {
   onClick?: () => void;
@@ -197,6 +49,37 @@ const PrevArrow = ({ onClick }: ArrowProps) => (
 );
 
 const Projects = ({ projects }: { projects: Project[] }) => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const openModal = (project: Project) => {
+    setSelectedProject(project);
+  };
+
+  // 모달이 열릴 때 body에 스크롤 막기
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      // 모달이 닫힐 때 body에 스크롤 허용
+      document.body.style.overflow = 'auto';
+    };
+  }, [selectedProject]);
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
+  // 모달 바깥 부분 클릭 시 닫기
+  const handleModalClick = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    // e.target이 모달 창의 자식 요소일 때에만 닫기
+    if (e.target === e.currentTarget) {
+      closeModal();
+    }
+  };
+
   const settings: Settings = {
     dots: false,
     infinite: true,
@@ -224,7 +107,7 @@ const Projects = ({ projects }: { projects: Project[] }) => {
                   className='slick-dots-white relative mb-4'
                 >
                   {project.images.map((image: string, index: number) => (
-                    <div key={index} className='h-50 md:mt-8'>
+                    <div key={index} className='h-50 md:mt-10'>
                       <Image
                         src={image}
                         alt={`Main Image ${index + 1}`}
@@ -240,9 +123,11 @@ const Projects = ({ projects }: { projects: Project[] }) => {
                 <h3 className='text-2xl font-bold mb-2 text-yellow-200'>
                   {project.title}
                 </h3>
-                <p className='text-gray-600 mb-2'>{project.duration}</p>
-                <p className='text-gray-600 mb-4'>{`${project.teamMembers}人 프로젝트`}</p>
-                <p className='text-gray-500 mb-4'>{project.description}</p>
+                <p className='text-gray-400 mb-2 italic'>{project.duration}</p>
+                <p className='text-gray-300 mb-4 text-sm'>{`${project.teamMembers}人 프로젝트`}</p>
+                <p className='bg-yellow-400 bg-opacity-10 pl-1  mb-4 rounded-sm'>
+                  {project.description}
+                </p>
                 {project.responsibilities && (
                   <p className='mb-1 flex items-center'>
                     <strong className='w-40 inline-block'>
@@ -296,8 +181,42 @@ const Projects = ({ projects }: { projects: Project[] }) => {
                 )}
               </div>
             </div>
+            <div className='flex justify-end pt-2'>
+              <button
+                className='text-yellow-500 hover:underline cursor-pointer text-sm font-bold flex items-center'
+                onClick={() => openModal(project)}
+              >
+                Read more
+              </button>
+            </div>
           </div>
         ))}
+        {selectedProject && (
+          // 모달 창
+          <div
+            className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50'
+            onClick={handleModalClick}
+          >
+            <div className='bg-white p-8 rounded-lg'>
+              <h2 className='text-2xl font-bold mb-4 text-yellow-800'>
+                {selectedProject.title}
+              </h2>
+              <p className='text-gray-400 italic mb-4'>
+                {selectedProject.duration}
+              </p>
+              {/* 기타 프로젝트 정보 출력 */}
+              <p>
+                {/* 프로젝트를 하게 된 이유, 얻은 지식, 부딪힌 문제, 해결 방안 등을 출력 */}
+              </p>
+              <button
+                className='text-yellow-500 hover:underline cursor-pointer'
+                onClick={closeModal}
+              >
+                닫기
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

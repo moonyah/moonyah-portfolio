@@ -16,8 +16,9 @@ interface Project {
   description: string;
   responsibilities?: string;
   techStack: string;
-  githubUrl: string;
+  githubUrl?: string;
   deploymentUrl?: string;
+  demoUrl?: string;
 }
 
 // 프로젝트 정보 배열
@@ -44,7 +45,7 @@ export const projectData = [
     description: '포트폴리오 용도로 제작한 웹사이트입니다.',
     techStack: 'React, Next.js, TypeScript',
     githubUrl: 'https://github.com/moonyah/moonyah-portfolio',
-    deploymentUrl: 'https://moonyah-portfolio.vercel.app/',
+    deploymentUrl: 'https://moonyah-portfolio.vercel.app',
   },
   {
     title: 'STAYINN',
@@ -60,7 +61,9 @@ export const projectData = [
     responsibilities: '메인 페이지, 카테고리 페이지',
     techStack: 'React, Next.js, TypeScript, Recoil',
     githubUrl: 'https://github.com/moonyah/KDT_Y_FE_Mini-Project',
-    deploymentUrl: 'https://www.stayinn.site/',
+    deploymentUrl: 'https://www.stayinn.site',
+    demoUrl:
+      'https://drive.google.com/file/d/14apsd5GBasq9pUgUAFFZjZgJzqrIvaB2/view',
   },
   {
     title: '호그와톡',
@@ -75,9 +78,10 @@ export const projectData = [
     ],
     description: '해리포터 컨셉의 소켓 기반 채팅 서비스',
     responsibilities: '공통 컴포넌트 (마이페이지, 친구 목록)',
-    techStack: 'React, Next.js, Firebase, Typescript, Recoil',
+    techStack: 'React, Next.js, Typescript, Recoil, Firebase',
     githubUrl: 'https://github.com/moonyah/Hogwartalk',
-    deploymentUrl: 'https://hogwartalk.vercel.app/',
+    deploymentUrl: 'https://hogwartalk.vercel.app',
+    demoUrl: 'https://www.youtube.com/watch?v=6IktbgBNJ7s',
   },
   {
     title: 'CS-yum-blog',
@@ -92,32 +96,43 @@ export const projectData = [
     ],
     description: 'CS스터디 내용을 정리해 놓은 블로그',
     responsibilities: '주 2회 스터디 참여, 블로그 글 발행 참여',
-    techStack: 'React',
+    techStack: 'React, TypeScript, Firebase',
     githubUrl: 'https://github.com/cs-yum/cs-yum-blog',
-    deploymentUrl: 'https://cs-yum-blog.vercel.app/',
+    deploymentUrl: 'https://cs-yum-blog.vercel.app',
   },
-  // {
-  //   title: 'Company Space',
-  //   duration: '2023년 9월 8일 - 2023년 9월 22일',
-  //   teamMembers: 5,
-  //   images: ['stayinn/1.gif', 'stayinn/2.gif', 'stayinn/3.gif'],
-  //   description: '직원 위키 서비스',
-  //   responsibilities: '나의 역할',
-  //   techStack: 'React',
-  //   githubUrl: 'https://github.com/your-username/final-project',
-  //   deploymentUrl: 'https://final-project.netlify.app',
-  // },
-  // {
-  //   title: '카페 직원 관리 서비스',
-  //   duration: '2023년 8월 7일 - 2023년 8월 17일',
-  //   teamMembers: 1,
-  //   images: ['stayinn/1.gif', 'stayinn/2.gif', 'stayinn/3.gif'],
-  //   description: '카페 직원들의 정보를 관리하는 서비스',
-  //   responsibilities: '나의 역할',
-  //   techStack: 'JavaScript, CSS, AWS S3',
-  //   githubUrl: 'https://github.com/your-username/final-project',
-  //   deploymentUrl: 'https://final-project.netlify.app',
-  // },
+  {
+    title: 'Company Space',
+    duration: '2023년 9월 8일 - 2023년 9월 22일',
+    teamMembers: 5,
+    images: [
+      '/assets/companySpace/1.gif',
+      '/assets/companySpace/2.gif',
+      '/assets/companySpace/3.gif',
+      '/assets/companySpace/4.png',
+      '/assets/companySpace/5.png',
+    ],
+    description: '직원 위키 서비스',
+    responsibilities: '출퇴근 모달 제작',
+    techStack: 'React',
+    githubUrl: 'https://github.com/YongYong21/Toy1_team2',
+    deploymentUrl: 'https://glittering-speculoos-415dd0.netlify.app',
+  },
+  {
+    title: '카페 직원 관리 서비스',
+    duration: '2023년 8월 7일 - 2023년 8월 17일',
+    teamMembers: 1,
+    images: [
+      '/assets/cafeManagementService/1.gif',
+      '/assets/cafeManagementService/2.png',
+      '/assets/cafeManagementService/3.gif',
+      '/assets/cafeManagementService/4.png',
+    ],
+    description: '카페 직원들의 정보를 관리하는 서비스',
+    techStack: 'JavaScript, CSS, AWS S3',
+    githubUrl:
+      'https://github.com/moonyah/emp_management_cafe?tab=readme-ov-file',
+    deploymentUrl: 'https://employee-management-cafe.netlify.app',
+  },
   // {
   //   title: '룸루랄라',
   //   duration: '',
@@ -129,27 +144,31 @@ export const projectData = [
   //   githubUrl: 'https://github.com/your-username/final-project',
   //   deploymentUrl: 'https://final-project.netlify.app',
   // },
-  // {
-  //   title: '7호선 빌런',
-  //   duration: '',
-  //   teamMembers: 3,
-  //   images: ['stayinn/1.gif', 'stayinn/2.gif', 'stayinn/3.gif'],
-  //   description: '7호선 빌런을 물리치는 3D 리듬 게임 (졸업 작품)',
-  //   responsibilities: '3D 모델링, 게임 UI/UX',
-  //   techStack: 'Unity, Blender',
-  //   githubUrl: 'https://github.com/your-username/final-project',
-  //   deploymentUrl: 'https://final-project.netlify.app',
-  // },
-  // {
-  //   title: 'Todolist Tomato',
-  //   duration: '2022년 1학기 기말 과제',
-  //   teamMembers: 1,
-  //   images: ['stayinn/1.gif', 'stayinn/2.gif', 'stayinn/3.gif'],
-  //   description:
-  //     '할 일을 완료하면 토마토가 열리는 일정 관리 앱 (2022-1학기 모바일 프로그래밍 수업 과제)',
-  //   techStack: 'Flutter, Firebase',
-  //   githubUrl: 'https://github.com/moonyah/TodolistTomato',
-  // },
+  {
+    title: 'Todolist Tomato',
+    duration: '2022년 1학기 기말 과제',
+    teamMembers: 1,
+    images: ['/assets/todolistTomato/1.png', '/assets/todolistTomato/2.png'],
+    description:
+      '할 일을 완료하면 토마토가 열리는 일정 관리 앱 (2022-1학기 모바일 프로그래밍 수업 과제)',
+    techStack: 'Flutter, Firebase',
+    githubUrl: 'https://github.com/moonyah/TodolistTomato',
+  },
+  {
+    title: '7호선 빌런',
+    duration: '2021년 9월 1일 - 2022년 5월 19일',
+    teamMembers: 3,
+    images: [
+      '/assets/line7Villain/1.png',
+      '/assets/line7Villain/2.png',
+      '/assets/line7Villain/3.png',
+      '/assets/line7Villain/4.png',
+    ],
+    description: '7호선 빌런을 물리치는 3D 리듬 게임 (졸업 작품)',
+    responsibilities: '3D 모델링, 게임 UI/UX',
+    techStack: 'Unity, Blender',
+    demoUrl: 'https://www.youtube.com/watch?v=JbltKXHdKgA',
+  },
 ];
 
 interface ArrowProps {
@@ -190,7 +209,7 @@ const Projects = ({ projects }: { projects: Project[] }) => {
     autoplaySpeed: 3000, // 3초마다 넘어가기
   };
   return (
-    <section id='projects' className='pt-10 pb-8'>
+    <section id='projects' className='pt-8 pb-4 md:pt-20 md:pb-8'>
       <div className='container mx-auto'>
         <h2 className='text-4xl font-bold mb-8 text-yellow-300'>Projects</h2>
         {projects.map((project, index) => (
@@ -236,17 +255,19 @@ const Projects = ({ projects }: { projects: Project[] }) => {
                   <strong className='w-40 inline-block'>Tech Stack</strong>{' '}
                   {project.techStack}
                 </p>
-                <p className='mb-1 flex flex-col'>
-                  <strong>Github</strong>{' '}
-                  <a
-                    href={project.githubUrl}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='text-yellow-100'
-                  >
-                    {project.githubUrl}
-                  </a>
-                </p>
+                {project.githubUrl && (
+                  <p className='mb-1 flex flex-col'>
+                    <strong>Github</strong>{' '}
+                    <a
+                      href={project.githubUrl}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='text-yellow-100'
+                    >
+                      {project.githubUrl}
+                    </a>
+                  </p>
+                )}
                 {project.deploymentUrl && (
                   <p className='mb-1 flex flex-col'>
                     <strong>Deployment</strong>{' '}
@@ -257,6 +278,19 @@ const Projects = ({ projects }: { projects: Project[] }) => {
                       className='text-yellow-100'
                     >
                       {project.deploymentUrl}
+                    </a>
+                  </p>
+                )}
+                {project.demoUrl && (
+                  <p className='mb-1 flex flex-col'>
+                    <strong>Demo</strong>{' '}
+                    <a
+                      href={project.demoUrl}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='text-yellow-100'
+                    >
+                      {project.demoUrl}
                     </a>
                   </p>
                 )}

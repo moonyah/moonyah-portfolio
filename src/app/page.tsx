@@ -11,12 +11,12 @@ export default function Home() {
       <Header />
       <main className='flex flex-col md:p-24 p-4 bg-black text-white'>
         <AboutMe />
-        <hr className='border-t border-gray-700 my-8' />
+        <hr className='border-t border-yellow-400 my-8' />
         <Skills />
-        <hr className='border-t border-gray-700 my-8' />
+        <hr className='border-t border-yellow-400 my-8' />
         <Projects projects={projectData} />
-        <hr className='border-t border-gray-700 my-8' />
-        <Career />
+        <hr className='border-t border-yellow-400 my-8' />
+        {/* <Career /> */}
       </main>
     </>
   );

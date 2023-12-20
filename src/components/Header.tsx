@@ -18,9 +18,9 @@ const Header: React.FC = () => {
           <li>
             <a href='#projects'>Projects</a>
           </li>
-          <li>
+          {/* <li>
             <a href='#career'>Career</a>
-          </li>
+          </li> */}
           <li>
             <a
               href='https://github.com/moonyah'

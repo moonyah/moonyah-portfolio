@@ -1,6 +1,6 @@
 interface ModalContent {
   title: string;
-  reason: string;
+  reason?: string;
   knowledge: string;
   challenges?: string;
   solutions?: string;
@@ -39,17 +39,21 @@ export const modalContents: Record<string, ModalContent> = {
   },
   'CS-yum-blog': {
     title: 'CS-yum-blog',
-    reason: 'CS스터디 내용을 정리해 놓은 블로그를 만든 이유...',
-    knowledge: 'React, TypeScript, Firebase를 사용하여...',
-    challenges: '블로그 개발 중에 부딪힌 문제들...',
-    solutions: '문제를 해결한 방안들...',
+    reason:
+      'CS스터디 내용을 정리해서 블로그를 만들어보면 복습도 되고 피드백도 얻을 수 있기 때문에 스터디 팀원들과 제작하게 되었습니다.',
+    knowledge:
+      '문서화 쉽게 도와주는 웹사이트 생성 도구인 Docusaurus 서비스를 이용해서 제작하였습니다.',
+    // challenges: '블로그 개발 중에 부딪힌 문제들...',
+    // solutions: '문제를 해결한 방안들...',
   },
   'Company Space': {
     title: 'Company Space',
-    reason: '직원 위키 서비스를 제작한 이유...',
-    knowledge: 'React를 사용하여...',
-    challenges: '출퇴근 모달 제작 중에 부딪힌 문제들...',
-    solutions: '문제를 해결한 방안들...',
+    // reason: '직원 위키 서비스를 제작하였습니다.',
+    knowledge: '처음으로 React를 경험한 협업 프로젝트입니다.',
+    challenges:
+      '출퇴근 모달 제작을 하는데 새로고침하면 타이머도 초기화되는 문제가 있었습니다.',
+    solutions:
+      '로컬 스토리지에 근무 시간(타이머)와 출퇴근 시간을 저장해서 문제를 해결하였습니다. 단, 이렇게 구현했을 때의 아쉬운 점은 로그인한 사용자와 타이머 정보를 저장해서 로그인을 하면 그 정보가 불러와지는 기능으로 되지 않는다는 것입니다.',
   },
   '카페 직원 관리 서비스': {
     title: '카페 직원 관리 서비스',

@@ -57,23 +57,30 @@ export const modalContents: Record<string, ModalContent> = {
   },
   '카페 직원 관리 서비스': {
     title: '카페 직원 관리 서비스',
-    reason: '카페 직원들의 정보를 관리하는 서비스를 만든 이유...',
-    knowledge: 'JavaScript, CSS, AWS S3를 사용하여...',
-    challenges: '서비스 개발 중에 부딪힌 문제들...',
-    solutions: '문제를 해결한 방안들...',
+    // reason: '카페 직원들의 정보를 관리하는 서비스를 만든 이유...',
+    knowledge:
+      'JavaScript, CSS, AWS S3를 사용하여 개발을 하였습니다. AWS S3를 경험해본다는 점에서 의미를 두고 적용하였습니다.',
+    // challenges: '체크 박스를 구현하고 ',
+    solutions:
+      '사진이 S3에 올라가기는 하지만 불러오는 기능까지 구현하지 못해서 아쉬운 부분이 있습니다. 처음에 스플레쉬 화면을 구현한 부분이 마음에 들었습니다.',
   },
   'Todolist Tomato': {
     title: 'Todolist Tomato',
-    reason: '할 일을 완료하면 토마토가 열리는 일정 관리 앱을 만든 이유...',
-    knowledge: 'Flutter, Firebase를 사용하여...',
-    challenges: '앱 개발 중에 부딪힌 문제들...',
-    solutions: '문제를 해결한 방안들...',
+    reason:
+      '할 일을 완료하면 토마토가 열리고 그것을 수확함으로서 성취감을 느끼는 Todo앱을 기획하고 개발하였습니다.',
+    knowledge:
+      'Flutter, Firebase를 사용하여 회원 가입/로그인 기능을 구현하고 Todo 기능을 구현하였습니다.',
+    // challenges: '앱 개발 중에 부딪힌 문제들...',
+    // solutions: '문제를 해결한 방안들...',
   },
   '7호선 빌런': {
     title: '7호선 빌런',
-    reason: '7호선 빌런을 물리치는 3D 리듬 게임을 만든 이유...',
-    knowledge: 'Unity, Blender를 사용하여...',
-    challenges: '게임 개발 중에 부딪힌 문제들...',
-    solutions: '문제를 해결한 방안들...',
+    reason:
+      '인터넷에서 유명한 지하철 빌런을 주제로 하여 게임을 만들면 재미있을 것 같다는 아이디어로 기획하고 제작하였습니다.',
+    knowledge: 'Unity, Blender를 사용하여 개발하였습니다.',
+    challenges:
+      '처음에는 Maya로 모델링을 진행했는데 크고 무거운 프로그램이라서 빠르고 가벼운 블렌더로 툴을 변경하였습니다.',
+    solutions:
+      '협업에 있어서 소통의 중요성을 크게 느꼈고 마지막에 3일동안 졸업전시를 했는데 직접 만든 결과를 소개하고 피드백을 받는 과정에서 성취감과 큰 즐거움을 느낀 경험이었습니다.',
   },
 };

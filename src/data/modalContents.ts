@@ -28,10 +28,14 @@ export const modalContents: Record<string, ModalContent> = {
   },
   호그와톡: {
     title: '호그와톡',
-    reason: '해리포터 컨셉의 소켓 기반 채팅 서비스를 개발한 이유...',
-    knowledge: 'React, Next.js, TypeScript, Recoil, Firebase를 사용하여...',
-    challenges: '개발 중에 마주한 어려움...',
-    solutions: '어려움을 해결한 방법...',
+    reason:
+      '해리포터 컨셉으로 각 기숙사에 대한 채팅방과 클럽에 대한 채팅방을 만들면 재미있을 것이라는 아이디어에서 기획/제작되었습니다.',
+    knowledge:
+      'React, Next.js, TypeScript, Recoil, Firebase를 사용하여 개발하였습니다.',
+    challenges:
+      '주어진 api에 대해서만 구현을 해야했기 때문에 기획한 것을 구현하는데 한계를 느꼈습니다. 가입한 사용자마다 기숙사를 배정받고 그 기숙사 정보를 이용해야 했습니다.',
+    solutions:
+      'Firebase를 추가로 이용해서 기숙사 정보를 저장하였고 그 문제를 해결하였습니다.',
   },
   'CS-yum-blog': {
     title: 'CS-yum-blog',

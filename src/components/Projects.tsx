@@ -207,7 +207,7 @@ const Projects = ({ projects }: { projects: Project[] }) => {
             className='fixed inset-0 flex items-center justify-center backdrop-blur-md overlay z-50'
             onClick={handleModalClick}
           >
-            <div className='bg-black p-8 m-4 rounded-lg relative border-2 border-gray-400 border-opacity-60'>
+            <div className='bg-black p-8 m-4 rounded-lg relative border-2 border-gray-400 border-opacity-60 max-w-xl'>
               <button
                 className='absolute top-4 right-4 text-white cursor-pointer'
                 onClick={closeModal}

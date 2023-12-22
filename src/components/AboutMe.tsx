@@ -66,7 +66,7 @@ const AboutMe: React.FC = () => {
 
         <div>
           <hr className='border-t border-gray-600 my-10' />
-          <ul className='list-disc pl-6 text-yellow-50 text-sm'>
+          <ul className='list-disc pl-6 text-yellow-50'>
             <li className='mb-2'>
               야놀자 X 패스트캠퍼스 프론트엔드 부트캠프 1기 (2023.07 - 2024.01)
             </li>

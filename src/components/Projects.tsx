@@ -9,6 +9,9 @@ import { CgChevronLeft, CgChevronRight } from 'react-icons/cg';
 // import '../styles/styles.css'; // 생성한 CSS 파일을 import
 import { projectData } from '../data/projestsData'; // Adjust the import path accordingly
 import { useEffect, useState } from 'react';
+import { FaGithub } from 'react-icons/fa';
+import { RxExternalLink } from 'react-icons/rx';
+import { HiOutlineExternalLink } from 'react-icons/hi';
 
 interface Project {
   title: string;
@@ -130,52 +133,52 @@ const Projects = ({ projects }: { projects: Project[] }) => {
                 </p>
                 {project.responsibilities && (
                   <p className='mb-1 flex items-center'>
-                    <strong className='w-40 inline-block'>
+                    <strong className='w-40 inline-block mr-2'>
                       Responsibilities
                     </strong>
                     {project.responsibilities}
                   </p>
                 )}
-                <p className='mb-1 flex items-center'>
+                <p className='mb-6 flex items-center'>
                   <strong className='w-40 inline-block'>Tech Stack</strong>{' '}
                   {project.techStack}
                 </p>
                 {project.githubUrl && (
-                  <p className='mb-1 flex flex-col'>
-                    <strong>Github</strong>{' '}
+                  <p className='mb-1'>
                     <a
                       href={project.githubUrl}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='text-yellow-100'
+                      className='text-yellow-100 flex items-center'
                     >
-                      {project.githubUrl}
+                      <strong>Github</strong>
+                      <HiOutlineExternalLink />
                     </a>
                   </p>
                 )}
                 {project.deploymentUrl && (
                   <p className='mb-1 flex flex-col'>
-                    <strong>Deployment</strong>{' '}
                     <a
                       href={project.deploymentUrl}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='text-yellow-100'
+                      className='text-yellow-100 flex items-center'
                     >
-                      {project.deploymentUrl}
+                      <strong>Deployment</strong>
+                      <HiOutlineExternalLink />
                     </a>
                   </p>
                 )}
                 {project.demoUrl && (
                   <p className='mb-1 flex flex-col'>
-                    <strong>Demo</strong>{' '}
                     <a
                       href={project.demoUrl}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='text-yellow-100'
+                      className='text-yellow-100 flex items-center'
                     >
-                      {project.demoUrl}
+                      <strong>Demo</strong>
+                      <HiOutlineExternalLink />
                     </a>
                   </p>
                 )}

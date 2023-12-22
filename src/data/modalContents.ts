@@ -2,19 +2,18 @@ interface ModalContent {
   title: string;
   reason: string;
   knowledge: string;
-  challenges: string;
-  solutions: string;
+  challenges?: string;
+  solutions?: string;
 }
 
 export const modalContents: Record<string, ModalContent> = {
   "Moonyah's Portfolio": {
     title: "Moonyah's Portfolio",
-    reason:
-      '포트폴리오 용도로 제작한 웹사이트입니다. (프로젝트를 하게 된 이유)',
+    reason: '포트폴리오 용도로 제작한 웹사이트입니다.',
     knowledge:
-      'React, Next.js, TypeScript를 사용하여 개발하는 경험을 쌓았습니다. (프로젝트를 통해 얻은 지식)',
-    challenges: '프로젝트 중에 부딪힌 문제들...',
-    solutions: '문제를 해결한 방안들...',
+      'React, Next.js, TypeScript를 사용하여 개발하고 배포하는 프로세스를 진행하였습니다. 또한 반응형을 고려해 UI/UX에 신경을 썼습니다.',
+    challenges:
+      '앞으로도 프로젝트를 추가할 것이기 때문에 효과적인 파일 구조에 대해 고민을 하였고 각 프로젝트마다의 자세한 정보를 넣기 위해 모달창을 이용했습니다.',
   },
   STAYINN: {
     title: 'STAYINN',

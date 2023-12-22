@@ -11,7 +11,10 @@ import { projectData } from '../data/projestsData'; // Adjust the import path ac
 import { useEffect, useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { RxExternalLink } from 'react-icons/rx';
+import { MdClose } from 'react-icons/md';
+
 import { HiOutlineExternalLink } from 'react-icons/hi';
+import { modalContents } from '@/data/modalContents';
 
 interface Project {
   title: string;
@@ -77,8 +80,12 @@ const Projects = ({ projects }: { projects: Project[] }) => {
   const handleModalClick = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
-    // e.target이 모달 창의 자식 요소일 때에만 닫기
-    if (e.target === e.currentTarget) {
+    // Check if the clicked element has the 'overlay' class
+    const isOverlayClicked =
+      e.target instanceof HTMLElement && e.target.classList.contains('overlay');
+
+    // Close the modal only if the overlay is clicked (not the modal content)
+    if (isOverlayClicked) {
       closeModal();
     }
   };
@@ -197,26 +204,28 @@ const Projects = ({ projects }: { projects: Project[] }) => {
         {selectedProject && (
           // 모달 창
           <div
-            className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50'
+            className='fixed inset-0 flex items-center justify-center backdrop-blur-md overlay z-50'
             onClick={handleModalClick}
           >
-            <div className='bg-white p-8 rounded-lg'>
-              <h2 className='text-2xl font-bold mb-4 text-yellow-800'>
+            <div className='bg-black p-8 m-4 rounded-lg relative border-2 border-gray-400 border-opacity-60'>
+              <button
+                className='absolute top-4 right-4 text-white cursor-pointer'
+                onClick={closeModal}
+              >
+                <MdClose size={20} />
+              </button>
+              <h2 className='text-2xl font-bold mb-4 text-yellow-300'>
                 {selectedProject.title}
               </h2>
               <p className='text-gray-400 italic mb-4'>
                 {selectedProject.duration}
               </p>
-              {/* 기타 프로젝트 정보 출력 */}
-              <p>
-                {/* 프로젝트를 하게 된 이유, 얻은 지식, 부딪힌 문제, 해결 방안 등을 출력 */}
-              </p>
-              <button
-                className='text-yellow-500 hover:underline cursor-pointer'
-                onClick={closeModal}
-              >
-                닫기
-              </button>
+              <div className='space-y-4 pl-4 border-l-4 border-yellow-200'>
+                <p>{modalContents[selectedProject.title]?.reason}</p>
+                <p>{modalContents[selectedProject.title]?.knowledge}</p>
+                <p>{modalContents[selectedProject.title]?.challenges}</p>
+                <p>{modalContents[selectedProject.title]?.solutions}</p>
+              </div>
             </div>
           </div>
         )}

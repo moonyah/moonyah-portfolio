@@ -214,13 +214,13 @@ const Projects = ({ projects }: { projects: Project[] }) => {
               >
                 <MdClose size={20} />
               </button>
-              <h2 className='text-2xl font-bold mb-4 text-yellow-300'>
+              <h2 className='text-2xl font-bold mb-4 text-yellow-400'>
                 {selectedProject.title}
               </h2>
               <p className='text-gray-400 italic mb-4'>
                 {selectedProject.duration}
               </p>
-              <div className='space-y-4 pl-4 border-l-4 border-yellow-200'>
+              <div className='space-y-4 pl-4 border-l-4 border-yellow-300'>
                 <p>{modalContents[selectedProject.title]?.reason}</p>
                 <p>{modalContents[selectedProject.title]?.knowledge}</p>
                 <p>{modalContents[selectedProject.title]?.challenges}</p>

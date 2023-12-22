@@ -17,10 +17,14 @@ export const modalContents: Record<string, ModalContent> = {
   },
   STAYINN: {
     title: 'STAYINN',
-    reason: '숙박 예약 서비스를 개발하게 된 이유...',
-    knowledge: 'React, Next.js, TypeScript, Recoil 등을 사용하여...',
-    challenges: '개발 중에 마주한 어려움...',
-    solutions: '어려움을 해결한 방법...',
+    reason:
+      '숙박 예약 서비스를 개발하면서 그에 대한 구매/검색 플로우와 사용자들의 편의성을 고려하였고 백엔드와의 첫 협업 프로젝트로서 의미가 있었습니다.',
+    knowledge:
+      'React, Next.js, TypeScript, Recoil을 사용하였고 css 라이브러리로 tailwind를 사용했습니다.',
+    challenges:
+      '호텔 카테고리와 지역을 동시에 분류해야 하는 상황에서, URL을 slug로 설정하여 호텔을 분류하려고 했으나 slug를 사용한 URL은 category와 location의 명시성이 부족해 혼란을 초래해서 사용자가 원하는 정보를 정확히 식별하기 어렵다는 문제가 있었습니다.',
+    solutions:
+      'URL을 product?category=&location=로 명시적으로 변경하여 각각의 매개변수를 명확히 나타내게 되었다. 사용자가 쉽게 필터링하고 원하는 정보를 찾을 수 있도록 개선이 되었다. 이로서 URL 구조의 중요성을 깨달았고, 명확한 매개변수를 통해 사용자 경험을 향상시키는 문제 해결을 하였습니다.',
   },
   호그와톡: {
     title: '호그와톡',

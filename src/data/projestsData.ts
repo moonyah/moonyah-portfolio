@@ -12,19 +12,6 @@ export const projectData = [
   //   deploymentUrl: 'https://final-project.netlify.app',
   // },
   {
-    title: "Moonyah's Portfolio",
-    duration: '2023년 12월',
-    teamMembers: 1,
-    images: [
-      '/assets/moonyahsPortfolio/1.png',
-      '/assets/moonyahsPortfolio/2.png',
-    ],
-    description: '포트폴리오 용도로 제작한 웹사이트입니다.',
-    techStack: 'React, Next.js, TypeScript',
-    githubUrl: 'https://github.com/moonyah/moonyah-portfolio',
-    deploymentUrl: 'https://moonyah-portfolio.vercel.app',
-  },
-  {
     title: 'STAYINN',
     duration: '2023년 11월 20일 - 2023년 12월 1일',
     teamMembers: 8,
@@ -41,6 +28,19 @@ export const projectData = [
     deploymentUrl: 'https://www.stayinn.site',
     demoUrl:
       'https://drive.google.com/file/d/14apsd5GBasq9pUgUAFFZjZgJzqrIvaB2/view',
+  },
+  {
+    title: "Moonyah's Portfolio",
+    duration: '2023년 12월',
+    teamMembers: 1,
+    images: [
+      '/assets/moonyahsPortfolio/1.png',
+      '/assets/moonyahsPortfolio/2.png',
+    ],
+    description: '포트폴리오 용도로 제작한 웹사이트입니다.',
+    techStack: 'React, Next.js, TypeScript',
+    githubUrl: 'https://github.com/moonyah/moonyah-portfolio',
+    deploymentUrl: 'https://moonyah-portfolio.vercel.app',
   },
   {
     title: '호그와톡',

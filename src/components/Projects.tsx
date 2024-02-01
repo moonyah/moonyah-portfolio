@@ -204,7 +204,7 @@ const Projects = ({ projects }: { projects: Project[] }) => {
         {selectedProject && (
           // 모달 창
           <div
-            className='fixed inset-0 flex items-center justify-center backdrop-blur-md overlay z-50'
+            className='fixed inset-0 overflow-y-auto flex items-start sm:items-center justify-center backdrop-blur-md overlay z-50'
             onClick={handleModalClick}
           >
             <div className='bg-black p-8 m-4 rounded-lg relative border-2 border-gray-400 border-opacity-60 max-w-xl'>

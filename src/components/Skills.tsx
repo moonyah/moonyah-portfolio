@@ -13,8 +13,8 @@ const Skills: React.FC = () => {
               Programming Languages
             </h3>
             <ul className='list-disc pl-4 text-gray-300'>
-              <li>JavaScript</li>
               <li>TypeScript</li>
+              <li>JavaScript</li>
               <li>Python</li>
             </ul>
           </li>
@@ -24,9 +24,6 @@ const Skills: React.FC = () => {
               Frontend
             </h3>
             <ul className='list-disc pl-4 text-gray-300'>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript</li>
               <li>React</li>
               <li>Next.js</li>
               <li>Recoil</li>
@@ -42,8 +39,8 @@ const Skills: React.FC = () => {
               Tools
             </h3>
             <ul className='list-disc pl-4 text-gray-300'>
-              <li>Trello</li>
               <li>Jira</li>
+              <li>Trello</li>
               <li>Firebase</li>
               <li>Git</li>
               <li>GitHub</li>

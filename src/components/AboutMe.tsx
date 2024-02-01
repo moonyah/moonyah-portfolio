@@ -49,9 +49,17 @@ const AboutMe: React.FC = () => {
         <p className='mb-4 text-gray-400 font-semibold'>
           You can reach me at{' '}
           <a
-            href='mailto:your.email@example.com'
+            href='mailto:dltk456@naver.com'
             className='text-gray-300 underline'
           >
+            dltk456@naver.com{' '}
+          </a>
+          or
+          <a
+            href='mailto:dltk789@gmail.com'
+            className='text-gray-300 underline'
+          >
+            {' '}
             dltk789@gmail.com
           </a>
           .
